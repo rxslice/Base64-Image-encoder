@@ -1,0 +1,5 @@
+{
+  "name": "Base64 Image Encoder",
+  "description": "A clean, modern tool to convert images to Base64 strings. Drag and drop an image or click to select a file, and instantly get its Base64 representation with a live preview.",
+  "requestFramePermissions": []
+}
