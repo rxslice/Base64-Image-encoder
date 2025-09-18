@@ -13,8 +13,9 @@ const App: React.FC = () => {
   const handleFileSelect = useCallback((file: File) => {
     if (!file) return;
 
-    if (!file.type.startsWith('image/')) {
-      setError('Invalid file type. Please upload an image.');
+    const acceptedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/svg+xml'];
+    if (!acceptedTypes.includes(file.type)) {
+      setError('Invalid file type. Please upload a JPEG, PNG, GIF, WEBP, or SVG file.');
       setImageInfo(null);
       return;
     }
